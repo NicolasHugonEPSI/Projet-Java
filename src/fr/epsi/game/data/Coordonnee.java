@@ -13,8 +13,18 @@ public class Coordonnee {
 		{
 			char valueColonne = coord.charAt(0);
 			
-			
-			
+			if(valueColonne - 'A' == 0)
+			{
+				this.colonne = 0;
+			}
+			else if(valueColonne - 'B' == 0)
+			{
+				this.colonne = 1;
+			}
+			else
+			{
+				this.colonne = 2;
+			}
 			
 			String valueLigne = coord.substring(1);
 			this.ligne = Integer.parseInt(valueLigne) - 1;
